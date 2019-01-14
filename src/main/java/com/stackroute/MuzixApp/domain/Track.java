@@ -5,8 +5,13 @@ import javax.persistence.*;
 public class Track {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+   
+    @ApiModelProperty(value = "track Id for each track")
     private int trackId;
+    @ApiModelProperty(value = "Track name")
     private String trackName;
+
+    @ApiModelProperty(value = "Comments for the Tracks")
     private String trackComments;
 
     public int getTrackId() {
